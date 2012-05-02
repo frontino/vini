@@ -1,4 +1,9 @@
 Vini::Application.routes.draw do
+  namespace :admin do 
+    resources :cars 
+  end
+
+
   root :to => "home#index"
 
   # The priority is based upon order of creation:
