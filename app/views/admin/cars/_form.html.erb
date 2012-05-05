@@ -1,10 +1,10 @@
-<%= form_for(@admin_car) do |f| %>
-  <% if @admin_car.errors.any? %>
+<%= form_for([:admin,@car]) do |f| %>
+  <% if @car.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(@admin_car.errors.count, "error") %> prohibited this admin_car from being saved:</h2>
+      <h2><%= pluralize(@car.errors.count, "error") %> prohibited this car from being saved:</h2>
 
       <ul>
-      <% @admin_car.errors.full_messages.each do |msg| %>
+      <% @car.errors.full_messages.each do |msg| %>
         <li><%= msg %></li>
       <% end %>
       </ul>

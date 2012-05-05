@@ -1,0 +1,10 @@
+<div class="car">
+	<h1><%= car.name %></h1>
+	<h1><%= car.description %></h1>
+</div>
+
+<%= link_to "Show", admin_car_path(car) %> |
+<%= link_to "Edit", edit_admin_car_path(car) %> |
+<%= link_to "Delete", admin_car_path(car), confirm: "Are you sure?", method: :delete %>
+
+</br>
