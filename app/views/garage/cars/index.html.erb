@@ -1,0 +1,8 @@
+<h1>Garagem</h1>
+<% @cars.each do |car| %>
+  <div class="h_car">
+    <h4><%= link_to car.name, pages_garage_car_path(car) %></h4>
+    <div class="image"></div>
+    <a><%= car.price%></a>
+  </div>
+<%end%>

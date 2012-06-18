@@ -1,6 +1,16 @@
 Vini::Application.routes.draw do
+  devise_for :admin_users, :path_names => { :sign_up => "register" } 
+
   namespace :admin do 
     resources :cars 
+  end
+
+  
+  resource :pages do
+    get 'contato'
+    namespace :garage do
+      resources :cars
+    end
   end
 
 

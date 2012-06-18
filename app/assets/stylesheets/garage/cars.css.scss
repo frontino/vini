@@ -1,0 +1,36 @@
+// Place all the styles related to the admin/cars controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+.warning {
+  color: silver;
+}
+
+// Showing car´s details
+  h1 {
+    color: darkred;
+  } 
+.garage_box {
+  margin: 40px 0 0 0;
+}
+  .car_title {
+    margin: 0 0 25px 0;
+    color: darkred;
+  }
+  .cars_img_box{
+    height: 200px;  
+    .cars_img {
+      p {
+        margin-top: 85px; 
+        font-size: 28px;
+        color: white;
+        text-align: center;}
+      float: left;
+      margin: 0 0 0 20px;
+      background: silver;
+      width: 200px;
+      height: 200px;
+    }
+  }
+  .cars_info { 
+    margin: 25px 0px 0px 0px; 
+  }

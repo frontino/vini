@@ -1,7 +1,11 @@
-<h1>Editing admin_car</h1>
+<div class="b_options">
+  <%= link_to '>> Novo Carro', new_admin_car_path %>  
+</div>
+<h2 class="titulo">Editar</h2>
 
 <%= render 'form' %>
 
-<%= link_to 'Show', @admin_car %> |
-
-<%= link_to 'Back', admin_cars_path %>
+<div class="b_options">
+  <%= link_to 'Detalhes', admin_car_path(@admin_car) %> |
+  <%= link_to 'Voltar', admin_cars_path %>
+</div>

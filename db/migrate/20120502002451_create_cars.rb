@@ -3,6 +3,7 @@ class CreateCars < ActiveRecord::Migration
     create_table :cars do |t|
       t.string :name
       t.text :description
+     
 
       t.timestamps
     end

@@ -1,3 +1,31 @@
 // Place all the styles related to the home controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+// Home's cars listing
+.h_car {
+  text-align: center;
+  width: 160px;
+  height: 180px;
+  margin:  0px 10px 20px 0px;
+  float: left;
+    &.h_car a {
+      color: darkred;
+      text-decoration: none;
+      margin:  0px 0px 0px 0px;  
+      &:visited {
+        color: #666; }
+      &:hover {
+        color: #fff;
+        background-color: darkred; } 
+    }
+}
+
+.image {
+  margin:  0 0 15px 30px;
+  background: silver;
+  width: 100px;
+  height: 100px;
+}
+
+

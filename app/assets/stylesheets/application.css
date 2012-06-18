@@ -11,3 +11,44 @@
  *= require_self
  *= require_tree .
 */
+.global {
+  display: table;
+  padding: 0 auto;
+  margin: 0 auto;
+  width: 760px;
+}
+header {
+  color: darkred;
+  text-align: center;
+  height: 50px;
+}
+.menu_box ul{
+  margin: 0px 0px 0px 140px;
+  text-align: center;
+  list-style:none;
+}
+  .menu_box ul li {
+    float: left;
+    margin: 0 0 0 30px;
+  }
+    .menu_box ul li a {
+      text-decoration: none;
+    }
+.cars_box {
+  display: table;
+  padding-left: 40px;
+  width: 720px;
+}
+.menu_bar {
+  display: block;
+  background-color: darkred;
+  height: 10px;
+}
+footer {
+  
+  text-align: center;
+  color: grey;
+  font-weight: bold;
+  font-family: Arial, "MS Trebuchet", sans-serif;
+  font-style: italic;
+}

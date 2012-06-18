@@ -6,7 +6,7 @@ gem 'rails', '3.2.1'
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
 gem 'sqlite3'
-
+# gem 'devise', '2.0.0'
 
 # Gems used only for assets and not required
 # in production environments by default.
@@ -19,9 +19,22 @@ group :assets do
 
   gem 'uglifier', '>= 1.0.3'
 end
+# added at may 10th
+gem "rspec-rails", ">= 2.9.0.rc2", :group => [:development, :test]
+gem "factory_girl_rails", ">= 3.1.0", :group => [:development, :test]
+gem "email_spec", ">= 1.2.1", :group => :test
+gem "cucumber-rails", ">= 1.3.0", :group => :test
+gem "capybara", ">= 1.1.2", :group => :test
+gem "database_cleaner", ">= 0.7.2", :group => :test
+gem "launchy", ">= 2.1.0", :group => :test
+gem "devise", "~> 2.0.0"
 
 gem 'jquery-rails'
 
+#gem "rmagick", "2.13.1", :require => 'RMagick'
+
+gem 'carrierwave'
+gem 'mail_form', '>= 1.3.0'
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 

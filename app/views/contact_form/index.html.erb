@@ -1,0 +1,13 @@
+<h1>Contato</h1>
+<div class="contact-form">
+  <div id="contact-notice"></div>
+  <% form_tag '/contact/send_mail', :class => "contact-form", :remote => true do %>
+
+  <p><b>Nome: </b><%=text_field_tag "name" %></p>
+  <p><b>E-mail: </b><%=email_field_tag "email" %></p>
+  <p><b>Assunto: </b><%=text_field_tag "subject" %></p>
+  <p><b>Mensagem: </b><br /><%=text_area_tag "message",nil, :rows => 10, :cols => 50 %></p>
+  <p><%= submit_tag "Enviar" %></p>
+
+  <% end %>
+</div>

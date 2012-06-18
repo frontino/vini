@@ -1,4 +1,7 @@
 class Admin::CarsController < ApplicationController
+  before_filter :authenticate_admin_user!
+  layout "admin"
+
   # GET /admin/cars
   # GET /admin/cars.json
   def index
@@ -15,7 +18,6 @@ class Admin::CarsController < ApplicationController
   # GET /admin/cars/new.json
   def new
     @car = Car.new
-
   end
 
   # GET /admin/cars/1/edit
@@ -30,7 +32,7 @@ class Admin::CarsController < ApplicationController
 
     respond_to do |format|
       if @car.save
-        format.html { redirect_to admin_cars_url, notice: 'Car was successfully created.' }
+        format.html { redirect_to admin_car_url(@car), notice: 'Car was successfully created.' }
         format.json { render json: @car, status: :created, location: @car }
       else
         format.html { render action: "new" }
@@ -46,7 +48,7 @@ class Admin::CarsController < ApplicationController
 
     respond_to do |format|
       if @car.update_attributes(params[:car])
-        format.html { redirect_to admin_cars_url, notice: 'Car was successfully updated.' }
+        format.html { redirect_to admin_car_url(@car), notice: 'Car was successfully updated.' }
         format.json { head :no_content }
       else
         format.html { render action: "edit" }

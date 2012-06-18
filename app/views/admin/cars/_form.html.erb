@@ -1,4 +1,4 @@
-<%= form_for([:admin,@car]) do |f| %>
+<%= form_for([:admin,@car], :html => {:multipart => true})  do |f| %>
   <% if @car.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@car.errors.count, "error") %> prohibited this car from being saved:</h2>
@@ -12,12 +12,34 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :name %><br />
+    <%= f.label :Nome %><br />
     <%= f.text_field :name %>
   </div>
+
+  <div class="img_field">
+    <%= f.file_field :image %>
+  </div>
+
+
   <div class="field">
-    <%= f.label :description %><br />
+    <%= f.label :Descrição %><br />
     <%= f.text_area :description %>
+  </div>
+  <div class="field">
+    <%= f.label :Ano %><div class="warning">*somente números</div>
+    <%= f.text_field :year %>
+  </div>
+  <div class="field">
+    <%= f.label :Marca %><br />
+    <%= f.text_field :brand %>
+  </div>
+  <div class="field">
+    <%= f.label :Modelo %><br />
+    <%= f.text_field :model %>
+  </div>
+  <div class="field">
+    <%= f.label :Preço %><br />
+    <%= f.text_field :price %>
   </div>
   <div class="actions">
     <%= f.submit %>

@@ -1,0 +1,20 @@
+<div class="garage_box">
+  <div class="car_title">
+    <h2><%= @car.name %></h2>
+  </div>
+  <div class="cars_img_box">
+    <div class="admin_cars_img"><%= image_tag @car.image_url.to_s %>
+    </div>
+    <div class="cars_img"><p>img 2</p>
+    </div>
+    <div class="cars_img"><p>img 3</p>
+    </div>
+  </div>
+  <div class="cars_info">
+    <a>Ano: <%= @car.year%></a></br>
+    <a>Modelo: <%= @car.model%></a></br>
+    <a>Marca: <%= @car.brand%></a></br>
+    <a>Detalhes: <%= @car.description%></a>
+  </div>
+  <a><%= link_to "<< Voltar", pages_garage_cars_path %></a>
+</div>

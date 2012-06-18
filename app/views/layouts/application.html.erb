@@ -1,14 +1,30 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Vini</title>
+  <title>Vini Veículos</title>
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
 </head>
 <body>
-
-<%= yield %>
-
+  <div class="global">
+    <header><h1>Vini Veículos</h1></header>
+    <div class="menu_box">
+      <ul>
+        <li class="link"><%= link_to "Principal", root_path %></li>
+        <li class="link"><%= link_to "Garagem", pages_garage_cars_path %></li>
+        <li class="link"><%= link_to "Contato", contato_pages_path %></li>
+        <li class="link"><%= link_to "Quem somos" %></li>
+      </ul>
+    </div>
+    </br><hr class="menu_bar">  
+    <div class="cars_box">
+      <%= yield %>
+    </div>
+    </br><hr>
+    <footer>
+      <p> Av. Cidade de Lisboa, 1201-A  - Pelotas - RS </p>
+    </footer>
+  </div>  
 </body>
 </html>

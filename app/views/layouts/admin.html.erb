@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Vini Veículos</title>
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+  <div class="global">
+    <header><h1>Gerenciador do Site Vini Veículos</h1></header>
+    <div class="admin_user_box">
+      <div class="admin_user">
+        <% if admin_user_signed_in? %>
+          Signed in as <%= current_admin_user.email %>. Not you?
+           <%= link_to "Sign out", destroy_admin_user_session_path %>
+        <% else %>
+          <%= link_to "Sign out" %> or <%= link_to "Sign out", destroy_admin_user_session_path %>.
+        <% end %>
+      </div>
+    </div>
+    <div class="admin_menu_box">
+      <ul>
+        <li><%= link_to "Carros", admin_cars_path %></li>
+        <li><%= link_to "Usuários" %></li>
+      </ul>
+    </div>
+    <div class="admin_cars_box">
+      <%= yield %>
+    </div>
+    <div class="options"><%= link_to "Ir para o site >>", root_path %>
+    </div>
+  </div>
+</body>
+</html>
